@@ -1,0 +1,120 @@
+*{
+   margin:0;
+   padding:0;
+ }
+/* Navbar Css */
+.nav-bg{
+  background-color:rgb(255,255,255, 0.2);
+  position: fixed !important;
+  top: 0 !important;
+  width: 100%;
+  z-index: 1;
+}
+.nav-title{
+  color:white !important;
+  font-size: 2em !important;
+  margin-left: 3vh
+}
+.nav-ulb{
+  padding-right:10vh;
+  margin-left:auto; margin-right:0;
+}
+.nav-lib{
+  font-size:1.5em;
+  padding-left:40px !important;
+  color:white !important;
+  }
+/* Welcome Section Css */
+.welcome-sect{
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(to right top, #690cb1, #b30090, #db0069, #ec0040, #eb4b12);
+  color:white;
+  text-align:center
+}
+.say-hi {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.down-arrow{
+  
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  color: #eb4b12
+}
+.arrow-icon{
+  text-decoration: none;
+  color: #eb4b12
+}
+/* Project section css */
+.projects-con{
+  height: 100vh;
+  background-image: url("./assets/pinkDust.png");
+}
+
+/* Contact section css */
+.contact-con{
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(to left bottom, #690cb1, #b30090, #db0069, #ec0040, #eb4b12);
+  color:white;
+  text-align:center
+}
+
+.contact-div{
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.link-list{
+  list-style: none;
+  padding-top: 20px;
+}
+
+.link-list li{
+  display: inline;
+  padding-left: 40px;
+}
+
+.link-list li a {
+  text-decoration: none;
+  color: white
+  
+}
+
+.link-icon{
+  padding-right:10px;
+}
+
+.link-list li:hover {
+  color: green;
+  animation:rise 1s;
+  animation-fill-mode:forwards;
+ }
+
+  
+
+/* @keyframes rise {
+  0% {
+    bottom:0px;
+    }
+   100% {
+    bottom:10px;
+    }
+} */
+
+
+
+
+
+
