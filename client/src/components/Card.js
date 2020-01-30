@@ -44,7 +44,7 @@ function MakeCard({ props }) {
         display: "flex",
         justifyContent: "center",
         flexDirection:" column",
-        fontSize: "3em",
+        fontSize: "40px",
         opacity: 0,
         opacity: hover ? 1 : 0
     })
@@ -57,7 +57,7 @@ function MakeCard({ props }) {
                 <animated.span style = {fadeIn}> 	&lt; </animated.span>
                 <div class="alignmentDiv" style = {alignmentDivStyle}>
                     <div style = {{display:"inline"}}> {props.name}</div>
-                    <div><Button style={{ marginTop: "5px", fontSize:"32px" }} variant="primary">Visit</Button></div>
+                    <div><Button style={{ marginTop: "5px", fontSize:"25px" }} variant="primary">Visit</Button></div>
                 </div>
                 <animated.span style = {fadeIn}> 	&gt; </animated.span>
             </div>
