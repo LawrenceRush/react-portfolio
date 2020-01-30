@@ -34,7 +34,7 @@ function MakeCard({ props }) {
         height: "100%",
         gridTemplateColumns: "auto",
         gridTemplateRows: "auto auto",
-        fontSize: "16px"
+        fontSize: "32px"
         
     }
 
