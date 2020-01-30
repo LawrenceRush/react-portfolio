@@ -2,6 +2,8 @@ import React from 'react'
 import Card from '../components/Card'
 import NoteImg from "../assets/Capture.PNG"
 import ASImg from "../assets/AppStorePhoto.PNG"
+import BTSImg from "../assets/BTS.PNG"
+import CodeTestImg from "../assets/CodeTestImg.PNG"
 
 const projects = [
     {
@@ -14,6 +16,16 @@ const projects = [
         img: ASImg,
         url: "https://lit-bastion-21079.herokuapp.com/"
     },
+    {
+        name: 'Breach the Summit',
+        img: BTSImg,
+        url: "https://lawrencerush.github.io/BreachTheSummit/" 
+    },
+    {
+    name: 'Code Test',
+    img: CodeTestImg,
+    url: "https://gentle-citadel-16427.herokuapp.com/"
+    }
 ]
 
 function Projects() {
@@ -22,6 +34,7 @@ function Projects() {
         padding: "20px",
         display: "Grid",
         gridTemplateColumns: 'Auto Auto',
+        gridTemplateRows: 'Auto Auto',
         gridColumnGap: "10px",
         gridRowGap: "10px",
         justifyItems: 'center',
