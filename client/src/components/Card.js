@@ -57,7 +57,7 @@ function MakeCard({ props }) {
                 <animated.span style = {fadeIn}> 	&lt; </animated.span>
                 <div class="alignmentDiv" style = {alignmentDivStyle}>
                     <div style = {{display:"inline"}}> {props.name}</div>
-                    <div><Button style={{ marginTop: "5px", fontSize:"25px" }} variant="primary">Visit</Button></div>
+                    <div><a href = {props.url}><Button style={{ marginTop: "5px", fontSize:"25px" }} variant="primary">Visit</Button></a></div>
                 </div>
                 <animated.span style = {fadeIn}> 	&gt; </animated.span>
             </div>
