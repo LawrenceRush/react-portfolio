@@ -30,7 +30,7 @@ function Projects() {
     return (
         <section className="projects-con" id = "projects">
             <div style = {grid}>
-                {projects.map((project, index) => <div><Card key={index} props = {project}/></div>)}
+                {projects.map((project, index) => <Card key={index} props = {project}/>)}
             </div>
         </section >
     )
