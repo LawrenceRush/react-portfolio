@@ -44,7 +44,7 @@ function MakeCard({ props }) {
         display: "flex",
         justifyContent: "center",
         flexDirection:" column",
-        fontSize: "40px",
+        fontSize: "80px",
         opacity: 0,
         opacity: hover ? 1 : 0
     })
