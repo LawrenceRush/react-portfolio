@@ -7,33 +7,37 @@ import CodeTestImg from "../assets/CodeTestImg.PNG"
 
 const projects = [
     {
-        name: 'Note Taker',
+        name: 'Notes',
         img: NoteImg,
-        url: "https://ancient-tundra-66128.herokuapp.com/"
+        url: "https://ancient-tundra-66128.herokuapp.com/",
+        gitUrl: "https://github.com/LawrenceRush/noteTaker"
     },
     {
         name: 'Appstore',
         img: ASImg,
-        url: "https://lit-bastion-21079.herokuapp.com/"
+        url: "https://lit-bastion-21079.herokuapp.com/",
+        gitUrl: "https://github.com/LawrenceRush/heroku-appstore"
     },
     {
         name: 'Breach the Summit',
         img: BTSImg,
-        url: "https://lawrencerush.github.io/BreachTheSummit/" 
+        url: "https://lawrencerush.github.io/BreachTheSummit/", 
+        gitUrl: "https://github.com/LawrenceRush/BreachTheSummit"
     },
     {
     name: 'Code Test',
     img: CodeTestImg,
-    url: "https://gentle-citadel-16427.herokuapp.com/"
+    url: "https://gentle-citadel-16427.herokuapp.com/",
+    gitUrl: "https://github.com/LawrenceRush/reactCodeTest"
     }
 ]
 
 function Projects() {
     const grid = {
         height: '100%',
-        padding: "20px",
+        padding: "5vh",
         display: "Grid",
-        gridTemplateColumns: 'Auto Auto',
+        gridTemplateColumns: 'Auto Auto Auto Auto',
         gridTemplateRows: 'Auto Auto',
         gridColumnGap: "10px",
         gridRowGap: "10px",

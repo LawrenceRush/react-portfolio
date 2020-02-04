@@ -4,9 +4,11 @@ import Button from 'react-bootstrap/Button';
 import {useSpring, animated} from 'react-spring'
 
 function MakeCard({ props }) {
+
     const [hover, setHover]= useState(false)
     const cardStyle = {
         height: "40vh",
+        width: "36vh",
         backgroundColor: 'rgba(255, 0, 0, 0.1)',
         color: "white",
 
@@ -14,37 +16,63 @@ function MakeCard({ props }) {
 
     const imgStyle = {
         height: '20vh',
-        objectFit: 'contain',
+        width: "100%",
+        objectFit: 'fill',
     }
 
     const cardBodyStyle = {
-        marginTop: "10px",
+        
         textAlign: "Center",
         display: 'grid',
-        gridTemplateColumns: "auto auto auto",
+        gridTemplateColumns: "8vh 20vh 8vh  ",
+        gridTemplateRows: "5vh 7vh 7vh",
         justifyContent: "space-between",
         alignItems: "center",
-        paddingLeft:"15px",
-        paddingRight:"15px",
-    }
-
-    const alignmentDivStyle = {
-        display: 'grid',
-        marginRight: 0,
-        height: "100%",
-        gridTemplateColumns: "auto",
-        gridTemplateRows: "auto auto",
-        fontSize: "32px"
         
     }
+    const linkButtonStyle = { 
+        fontSize:"2vh" 
+    }
+    
+    const cardTitleStyle = {
+        display:"inline",
+        gridColumnStart:1,
+        gridColumnEnd: 4,
+        gridRowStart: 1,
+        gridRowEnd: 1,
+    }
+    const leftBracket = {
+        gridColumnStart:1,
+        gridColumnEnd: 2,
+        gridRowStart: 2,
+        gridRowEnd: 4,
+    }
 
+    const rightBracket = {
+        gridColumnStart:3,
+        gridColumnEnd: 4,
+        gridRowStart: 2,
+        gridRowEnd: 4,
+    }
+    const gitBtn = {
+        gridColumnStart:2,
+        gridColumnEnd: 3,
+        gridRowStart: 2,
+        gridRowEnd: 3,
+    }
+    const siteBtn = {
+        gridColumnStart:2,
+        gridColumnEnd: 3,
+        gridRowStart: 3,
+        gridRowEnd: 4,
+    }
 
-    const fadeIn = useSpring({
+    const bracketFadeIn = useSpring({
+        height: "14vh",
+        lineHeight: "14vh",
         color: "orange", 
-        display: "flex",
-        justifyContent: "center",
-        flexDirection:" column",
-        fontSize: "80px",
+        fontSize: "10vh",
+        lineHeight: "9vh",
         opacity: 0,
         opacity: hover ? 1 : 0
     })
@@ -54,12 +82,13 @@ function MakeCard({ props }) {
         <a onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}><div style={cardStyle} class="card">
             <img style={imgStyle} src={props.img} />
             <div style={cardBodyStyle} class="cardBody">
-                <animated.span style = {fadeIn}> 	&lt; </animated.span>
-                <div class="alignmentDiv" style = {alignmentDivStyle}>
-                    <div style = {{display:"inline"}}> {props.name}</div>
-                    <div><a href = {props.url}><Button style={{ marginTop: "5px", fontSize:"25px" }} variant="primary">Visit</Button></a></div>
-                </div>
-                <animated.span style = {fadeIn}> 	&gt; </animated.span>
+               <div style = {leftBracket}> <animated.div style = {bracketFadeIn}> 	&lt; </animated.div> </div>
+                    <div style = {cardTitleStyle}> {props.name}</div>
+                    <div style = {siteBtn}><a href = {props.url}><Button style={linkButtonStyle} variant="primary">Website</Button></a></div>
+                    <div style = {gitBtn}><a href = {props.gitUrl}><Button style={linkButtonStyle} variant="dark">Repository</Button></a></div>
+
+                
+                <div  style = {rightBracket} ><animated.div style = {bracketFadeIn}> 	&gt; </animated.div></div>
             </div>
         </div>
         </a>
@@ -68,16 +97,3 @@ function MakeCard({ props }) {
 
 export default MakeCard
 
-{/* <Card style={{ background:'rgba(255, 0, 0, 0.1)'}}>
-//      <div style = {{height: '20vh'}}>      
-//   <Card.Img style={{height: '20vh', objectFit:'contain' }} variant="top" src={props.img} />
-//   </div> 
-//   <Card.Body  style={{ textAlign:'center' }} >
-      
-// <Card.Title style={{ color:'white' }} >{props.name}</Card.Title>
-    
-//     <a href={props.url}><Button variant="primary">Visit</Button>
-// </a>
-    
-//   </Card.Body>
-// </Card> */}
