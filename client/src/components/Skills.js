@@ -9,10 +9,24 @@ import {DiMysql}from 'react-icons/di';
 import { FaBootstrap } from 'react-icons/fa';
 import { animated, useTrail, config,  } from 'react-spring';
 
+const skillsHeadingSty = {
+    testAlign: "left",
+    paddingLeft: "5vh"
+}
+
+const skillsConSty = {
+    width: "100%",
+    display:"grid",
+    gridTemplateColumns: "repeat(7, auto)",
+    justifyContent:  "space-between" ,
+    padding: "0 10vh 0 10vh",
+}
+
 function MakeSkills() {
 const skillsSty = {
     position: "absolute",
   top: "80%",
+  width: "100%"
     }
 
     const nodeIcon = true ?  <FaNodeJs/>  : null
@@ -32,7 +46,7 @@ const skillsSty = {
         from:{
             transform: "translate3d(250vh,0,0)"
           },
-         transform: toggle ? "translate3d(0vh,0,0)":"translate3d(250vh,0,0)"
+         transform: toggle ? "translate3d(0vh,0,0)":"translate3d(250vh,0,0)",
     });
 
     useEffect(() => {
@@ -42,12 +56,14 @@ const skillsSty = {
 
     return (
         <div style = {skillsSty}>
-            Some of my skills:
-            <br/>
+            <div style = {skillsHeadingSty}>Some of my skills:</div>
+            <div style = {skillsConSty}>
             {springs.map((animation, index) => (
+             
             <animated.div style={animation} key={index}>{icons[index]}{skillNames[index]}</animated.div>
+            
       ))}
-          
+          </div>
         </div>
     )
 }
