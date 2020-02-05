@@ -15,6 +15,7 @@ const skillsHeadingSty = {
 }
 
 const skillsConSty = {
+    marginTop: "2vh",
     width: "100%",
     display:"grid",
     gridTemplateColumns: "repeat(7, auto)",
@@ -24,6 +25,8 @@ const skillsConSty = {
 
 function MakeSkills() {
 const skillsSty = {
+    fontSize: "3vh",
+
     position: "absolute",
   top: "80%",
   width: "100%"
