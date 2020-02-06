@@ -12,8 +12,8 @@ const navTitleStyle = {
 }
 
 const navbarStyle = {
-  height: "3vh !important"
 }
+
 function Navigation() {
     return (
         

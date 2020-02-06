@@ -60,7 +60,9 @@
 /* Project section css */
 .projects-con{
   height: 100vh;
+  width: 100%;
   background-image: url("./assets/pinkDust.png");
+  display: inline-block
 }
 
 /* Contact section css */
@@ -69,7 +71,8 @@
   height: 100vh;
   background-image: linear-gradient(to left bottom, #690cb1, #b30090, #db0069, #ec0040, #eb4b12);
   color:white;
-  text-align:center
+  text-align:center;
+  
 }
 
 .contact-div{
@@ -78,6 +81,7 @@
   transform: translateY(-50%);
   left: 50%;
   transform: translateX(-50%);
+  min-width: 260.5px;
 }
 
 .link-list{
@@ -100,7 +104,77 @@
   padding-right:10px;
 }
 
+.skillsCon {
+  margin-top: 2vh;
+  width: 100%;
+  display:grid;
+  grid-template-columns: repeat(7, auto);
+  justify-content:  space-between ;
+  padding: 0 10vh 0 10vh;
 
+}
+.skillsSty {
+  font-size: 3vh;
+
+  position: absolute;
+top: 80%;
+width: 100%
+  }
+
+@media only screen and (max-width: 768px) {
+  .projects-con{
+    height: 200vh;
+    
+  width: 100%;
+  background-image: url("./assets/pinkDust.png");
+  display: inline-block
+  }
+
+  .link-list li{
+    display: block;
+    padding-left: 40px;
+  }
+
+  .skillsCon {
+    
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 156px 156px 156px;
+    align-items: end;
+  } 
+
+  .skillsSty {
+    
+  top: 65%;
+  
+    }
+
+    .say-hi {
+      position: absolute;
+      text-align:center;
+      top: 25%;
+      transform: translateY(-50%);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+ 
+}
+
+@media only screen and (max-width: 1170px) {
+ 
+
+  .link-list li{
+    display: block;
+    padding-left: 40px;
+  }
+
+  .skillsCon {
+    
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: auto auto;
+  
+  } 
+ 
+}
 
   
 

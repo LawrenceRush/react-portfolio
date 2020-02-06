@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useState, useEffect} from 'react'
 import Card from '../components/Card'
 import NoteImg from "../assets/Capture.PNG"
 import ASImg from "../assets/AppStorePhoto.PNG"
@@ -33,22 +33,73 @@ const projects = [
 ]
 
 function Projects() {
+
+    const vw = Math.max(document.documentElement.clientWidth, window.innerclientWidth || 0);
+
     const grid = {
+        marginTop: '10vh',
         height: '100%',
         padding: "5vh",
         display: "Grid",
-        gridTemplateColumns: 'Auto Auto Auto Auto',
-        gridTemplateRows: 'Auto Auto',
+        gridTemplateColumns: 'repeat(4, 36vh)',
+        gridTemplateRows: '40vh 40vh',
         gridColumnGap: "10px",
         gridRowGap: "10px",
-        justifyItems: 'center',
-        alignItems: 'center'
+        justifyContent: "space-around"
+        
     }
+    const tabGrid = {
+        marginTop: '10vh',
+        height: '100%',
+        padding: "5vh",
+        display: "Grid",
+        gridTemplateColumns: 'repeat(2, 36vh)',
+        gridTemplateRows: '40vh 40vh',
+        gridColumnGap: "10px",
+        gridRowGap: "10px",
+        justifyContent: "space-around"
+        
+    }
+    const phoneGrid = {
+        marginTop: '10vh',
+        height: '100%',
+        padding: "5vh",
+        display: "Grid",
+        gridTemplateColumns: 'repeat(1, 36vh)',
+        gridTemplateRows: '40vh 40vh',
+        gridColumnGap: "10px",
+        gridRowGap: "10px",
+        justifyContent: "space-around"
+    
+    }
+
+    
+
+    
+
+    
+   
+
+
     return (
         <section className="projects-con" id = "projects">
+
+          {vw > 1440 && 
             <div style = {grid}>
                 {projects.map((project, index) => <Card key={index} props = {project}/>)}
             </div>
+            }
+             { vw < 1440 &&  vw > 768 &&
+            <div style = {tabGrid}>
+                {projects.map((project, index) => <Card key={index} props = {project}/>)}
+            </div>
+            }
+             { vw < 768 &&
+            <div style = {phoneGrid}>
+                {projects.map((project, index) => <Card key={index} props = {project}/>)}
+            </div>
+            }
+
         </section >
     )
 }

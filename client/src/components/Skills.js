@@ -14,23 +14,20 @@ const skillsHeadingSty = {
     paddingLeft: "5vh"
 }
 
-const skillsConSty = {
-    marginTop: "2vh",
-    width: "100%",
-    display:"grid",
-    gridTemplateColumns: "repeat(7, auto)",
-    justifyContent:  "space-between" ,
-    padding: "0 10vh 0 10vh",
-}
+// const skillsConSty = {
+//     marginTop: "2vh",
+//     width: "100%",
+//     display:"grid",
+//     gridTemplateColumns: "repeat(7, auto)",
+//     justifyContent:  "space-between" ,
+//     padding: "0 10vh 0 10vh",
+// }
 
 function MakeSkills() {
-const skillsSty = {
-    fontSize: "3vh",
+    
+const vw = Math.max(document.documentElement.clientWidth, window.innerclientWidth || 0);
 
-    position: "absolute",
-  top: "80%",
-  width: "100%"
-    }
+
 
     const nodeIcon = true ?  <FaNodeJs/>  : null
     const mongoIcon = true ?  <DiMongodb/> : null
@@ -58,12 +55,12 @@ const skillsSty = {
 
 
     return (
-        <div style = {skillsSty}>
+        <div className = "skillsSty">
             <div style = {skillsHeadingSty}>Some of my skills:</div>
-            <div style = {skillsConSty}>
+            <div className = "skillsCon" >
             {springs.map((animation, index) => (
              
-            <animated.div style={animation} key={index}>{icons[index]}{skillNames[index]}</animated.div>
+            <animated.div className = "skill" style={animation} key={index}>{icons[index]}{skillNames[index]}</animated.div>
             
       ))}
           </div>
